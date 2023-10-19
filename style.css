@@ -322,7 +322,7 @@ button:hover {
 }
 
 .sec3 .upper {
-    background-image: url(/images/cc.jpg);
+    background-image: url(images/cc.jpg);
     background-size: cover;
     background-position: center;
 
@@ -467,7 +467,7 @@ button:hover {
 }
 
 .cc-card .img {
-    background-image: url(/images/asus\ lap\ png.png);
+    background-image: url(images/asus\ lap\ png.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
