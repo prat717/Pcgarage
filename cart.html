@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar flex">
+        <div class=" container flex">
+            <div class="nav-logo">
+                <img src="/images/logo.png" alt="">
+            </div>
+
+            <div class="nav-items flex">
+                <a href="index.html">HOME</a>
+                <a href="">DESKTOP</a>
+                <a href="">LAPTOP</a>
+                <a href="">ACCESSORIES</a>
+            </div>
+
+            <div class="nav-account flex">
+                <a href="Register.html"><img src="/images/user icon.png" alt=""></a>
+                <a href="cart.html"><img src="/images/cart icon.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="cart-sec container flex">
+            <div class="black-div flex">
+                <ul class="flex">
+                    <li class="shopping-cart-text"><a href="" style="color: white;">Shopping cart</a></li>
+                    <li class="checkout-text"><a href="checkout.html" style="color: rgb(126, 126, 126);">Checkout</a></li>
+                    <li class="complete-order-text"><a href="" style="color: rgb(126, 126, 126);">Complete order</a></li>
+                </ul>
+            </div>
+            <div class="cart-main flex">
+                <div class="left">
+                    <form>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>&nbsp</th>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td class="product-thumbnail">
+                                        <img src="images/asus lap png.png" alt="">
+                                    </td>
+                                    <td class="product-title">
+                                        Asus Tuf A15 HN075WS
+                                    </td>
+                                    <td class="product-price">
+                                        70,000
+                                    </td>
+                                    <td>
+                                        <div class="qty-cart flex">
+                                            <button class="qty-button">+</button>
+                                            <input type="number">
+                                            <button class="qty-button">-</button>
+                                        </div>
+                                    </td>
+                                    <td class="product-subtotal">
+                                        70000
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div class="right flex">
+                    <div class="card flex">
+                        <h2>Cart totals</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Subtotal</th>
+                                    <td>70000</td>
+                                </tr>
+                                <tr>
+                                    <th>Shipping</th>
+                                    <td>
+                                        <ul>
+                                            <li><label for="Shipping-method-home-delivery">
+                                                    Home Delivery
+                                                </label>
+                                                <input type="radio" name="Shipping-method"
+                                                    value="Shipping-method-home-delivery" checked>
+
+                                            </li>
+                                            <li><label for="Shipping-method-store-pickup">
+                                                    Store-Pickup
+                                                </label>
+                                                <input type="radio" name="Shipping-method"
+                                                    value="Shipping-method-store-pickup">
+
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="cart-card-total">
+                                    <th>Total</th>
+                                    <td>70000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button onclick="window.location.href= 'checkout.html'">Proceed to checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container flex">
+                <div class="upper">
+                    <div class="adv footudiv">
+
+                        <img src="/images/logo.png" alt="">
+
+                        <p>Call Us- +91 7709238315</p>
+                        <div class="social-div flex ">
+                            <img src="/images/insta logo.png" alt="">
+                            <img src="/images/whatsapp logo.png " alt="">
+                            <img src="/images/yt logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="desk-sec footudiv flex">
+                        <!-- <h3>DESKTOP</h3>
+                    <a  href="" >
+                        Pre-Built
+                    </a>
+                    <a href="">
+                        Build Your Own
+                    </a>
+                    <a href="">
+                        Accsesories
+                    </a> -->
+                        <h3>DESKTOP</h3>
+                        <ul>
+                            <li><a href="">Pre-Built</a></li>
+                            <li><a href="">Build Your Own</a></li>
+                            <li><a href="">Accessories</a></li>
+                        </ul>
+
+
+                    </div>
+                    <div class="lap-sec footudiv flex">
+
+                        <h3>LAPTOP</h3>
+                        <ul>
+                            <li><a href="">Productivity</a></li>
+                            <li><a href="">Gaming</a></li>
+                            <li><a href="">Business</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="address footudiv">
+                        <h3>VISIT US</h3>
+                        <p>1778,2nd Lane, E Ward<br> Mahalaxminagar,<br> Rajarampuri, Kolhapur,<br> Maharashtra 416201
+                        </p>
+                    </div>
+                </div>
+                <div class="lower">
+                    <p class="Copyright">Copyright Prat Studio 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
