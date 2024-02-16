@@ -1,0 +1,274 @@
+@media screen and (max-width: 768px) {
+    .nav-items a{
+        display:none !important;
+    }
+
+    .navbar.flex{
+        padding-inline: 1rem;
+    }
+
+    .nav-logo img{
+        width: 120px;
+    }
+
+    .navbar .menu-ham{
+        display: block;
+    }
+
+    .nav-account{
+        display: none;
+    }
+
+
+    h1 {
+        font-weight: 700;
+        font-size: 2.5em;
+    }
+    
+    h2 {
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    
+    h3 {
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+    
+    h4 {
+        font-weight: 400;
+        font-size: 0.6rem;
+        color: rgb(145, 145, 145);
+    }
+    
+    p {
+        font-weight: 400;
+        font-size: 0.8rem;
+        color: var(--secondary-color);
+    }
+
+    button {
+        
+        font-size: 0.8rem;
+    }
+
+    
+ 
+
+    .cart-sec{
+        flex-direction: column;
+    }
+
+   .footer .adv{
+    width: 40%;
+   }
+    .footer .adv .pc-logo{
+        width: 150px;
+        align-self: start;
+    }
+   
+    .sec2 .card-sec .c5{
+      display: none;
+    }
+
+    .sec4 h2{
+        text-align: center;
+    }
+
+
+    .checkout-sec .checkout-main{
+        width: 100% !important;
+    }
+
+    .checkout-sec .black-div {
+        padding: 1rem;
+    }
+    .checkout-main form{
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .container{
+        padding-inline: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    .nav-account{
+        display: none;
+    }
+
+    .container{
+        padding-inline: 0.5rem;
+        overflow: hidden;
+    }
+
+    .hero-sec img{
+        width: 100%;
+    }
+    .hero-sec{
+        height: 150px;
+    }
+
+    .checkout-sec .black-div {
+        padding: 0.5rem;
+        height: 4rem;
+    }
+}
+
+
+
+/* For mobile L */
+
+@media screen and (max-width: 426px) {
+    .hero-sec img {
+        width: 100%;
+        padding: 0;
+        object-fit: contain;
+    }
+
+    .navbar.flex{
+        height: 8vh;
+    }
+  
+    .hero-sec {
+        height: 20vh;
+        margin: 0;
+        
+    }
+    
+    .container{
+        padding-bottom:2rem ;
+    }
+
+    .sec2{
+        height: 100%;
+    }
+    .sec2 h2{
+        text-align: center;
+    }
+
+    .sec3 h2{
+        text-align: center;
+    }
+    .sec3{
+        height: 1300px;
+    }
+    
+    .sec3 .card-sec{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        height: 1200px;
+        margin: 0;
+    }
+
+    .sec3 .card{
+        width: 70%;
+    }
+    
+    .sec4-lower{
+        gap: 2rem;
+    }
+
+   
+    
+    
+    /* .sec4-lower .right .text p{
+        text-align: justify;
+    } */
+
+
+    .sec4-lower{
+        flex-direction: column;
+        margin: 0;
+        height: 100%;
+        justify-content: start;
+    }
+   
+    
+    .sec4-lower .right{
+        width: 100%;
+        
+    }
+
+
+    .cart-main{
+        flex-direction: column;
+    }
+
+    .black-div{
+        width: 100% !important;
+        gap: 1rem;
+
+        
+    }
+
+    .black-div a{
+        font-size: 0.9rem;
+
+    }
+
+    .cart-main .right{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer{
+        flex-direction: column;
+    }
+
+    .footer .container .upper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .upper .social-div{
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    
+
+    .footer .footudiv{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .checkout-sec{
+        overflow: hidden;
+    }
+
+   
+}
+
+
+/*For Mobile L */
+
+@media screen and (max-width: 321px) {
+    .navbar{
+        height: 40px;
+    }
+
+    .navbar .menu-ham{
+        width: 20px;
+    }
+    
+    .hero-sec img {
+        width: 100%;
+        
+    }
+
+    .hero-sec {
+        padding: 0;
+    }
+
+    .sec3 .card{
+        width: 90%;
+    }
+
+    
+}

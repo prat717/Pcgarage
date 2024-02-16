@@ -33,7 +33,6 @@
     margin: 0%;
     padding: 0%;
     font-family: 'poppins', sans-serif;
-    scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
@@ -41,22 +40,22 @@
     --primary-color: #ffd100;
     --secondary-color: #333533;
     --faint-text-color: #626262;
-    --third-color: #fff2b6;
+    --third-color: #fffbee;
     --faint-border-color: rgb(206, 206, 206);
 }
 
 h1 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 3em;
 }
 
 h2 {
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 400;
+    font-size: 2rem;
 }
 
 h3 {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1rem;
 }
 
@@ -96,13 +95,14 @@ ul {
 
 .container {
     margin-inline: auto;
-    width: 1300px;
-    padding: 50px 0 0 0;
+    padding: 4rem 8rem;
+    gap: 2rem;
 }
+
 
 .flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
 }
 
@@ -114,6 +114,7 @@ button {
     border-radius: 6px;
     height: 35px;
     font-size: 1rem;
+    padding: 0.5rem 1rem;
 }
 
 button:hover {
@@ -125,21 +126,19 @@ button:hover {
     height: 35px;
     cursor: pointer;
     font-size: 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .nav-items {
-    width: 50%;
+    width: 40%;
     font-weight: 500;
     font-size: 1em;
     letter-spacing: 0.5px;
     transition: 1s;
     transition-timing-function: ease;
+    outline: none;
 }
 
-.nav-items a:hover {
-    transform: scalex(1.1) scaleY(1.1);
-
-}
 
 .navbar .nav-logo h2,
 .nav-account h3 {
@@ -147,20 +146,27 @@ button:hover {
 }
 
 .navbar {
-    height: 60px;
+    height: 10vh;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 0px 10px rgb(212, 212, 212);
     color: var(--secondary-color);
     width: 100%;
     position: fixed;
     background-color: white;
     top: 0;
     z-index: 10;
+    margin-inline: auto;
+    padding-inline: 6rem;
+    
 }
 
 .nav-logo img {
     width: 150px;
+}
+
+.navbar .menu-ham {
+    width: 25px;
+    display: none;
 }
 
 .navbar .flex {
@@ -168,22 +174,26 @@ button:hover {
     align-items: center;
 }
 
-.navbar .container {
-    padding: 0;
-}
 
 .main {
-    margin-top: 60px;
+    position: relative;
+    top: 10vh;
     z-index: 1;
+    margin: auto;
+    height: 100%;
 }
 
 .hero-sec {
-    height: 250px;
+    justify-content: center;
+    height: 100%;
+    background-color: var(--third-color);
 }
 
-.hero-sec.container {
-    padding-top: 0;
+.hero-sec img {
+    width: 70%;
+    height: 100%;
 }
+
 
 .nav-account {
     gap: 15px;
@@ -192,7 +202,7 @@ button:hover {
 .nav-account img {
     width: 30px;
     transition: 0.5s;
-    
+
 }
 
 .nav-account img:hover {
@@ -200,52 +210,96 @@ button:hover {
 
 }
 
-.hero-sec img {
-    width: 60%;
-    padding: 0;
-    object-fit: contain;
-}
+
+
+
+
 
 .sec2 {
     flex-direction: column;
-    height: 500px;
-    justify-content: start;
-
 }
 
-.card-sec {
 
+/* swiper css below */
+
+.slider-container {
     width: 100%;
-    justify-content: center;
-    margin-top: 40px;
+    padding: 2rem 0 !important;
+    /* background-color: grey; */
 }
+
+
+
+
+.slide-content {
+    /* margin: 0 30px; */
+    height: 30vh;
+    overflow: hidden;
+}
+
+.card .img-box {
+    height: 200px;
+}
+
+.card .img-box img {
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+
+}
+
+
+
+
+.card .text h3 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.swiper-button-next {
+    right: 0 !important;
+
+}
+
+.swiper-button-prev {
+    left: 0 !important;
+
+}
+
+
+
+
+
 
 .sec2 .card {
     flex-direction: column;
-    width: 160px;
+    width: 200px !important;
     height: 180px;
-    box-shadow: 1px 1px 10px rgb(165, 165, 165);
+    /* box-shadow: 1px 1px 10px rgb(165, 165, 165); */
+    border: 0.5px solid var(--secondary-color);
     border-radius: 6px;
-    margin-inline: 30px;
-    transition: all 2s ease;
+    background-image: radial-gradient(circle, white 10%, rgb(255, 204, 0) 90%);
+    transition: all 2s ease-in-out;
 }
 
 
 
-.card button{
+.card button {
     width: 100%;
     color: white;
     background-color: var(--secondary-color);
     border-radius: 0 0 6px 6px;
 
 }
-.card button:hover{
+
+.card button:hover {
     background-color: #525252;
+
 }
 
 .card .upper {
     height: 85%;
-    border-radius: 6px 6px 0 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+    justify-content: center;
 }
 
 
@@ -256,7 +310,9 @@ button:hover {
     transition: all 1s ease;
 }
 
-.sec2 .card:hover img{
+
+
+.sec2 .card:hover img {
     transform: scale(1.1);
 }
 
@@ -269,16 +325,16 @@ button:hover {
     height: 15%;
 }
 
-.sec3 .card .lower button{
+.sec3 .card .lower button {
     width: 100%;
     height: 100%;
-    border-top-left-radius: 0 ;
+    border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-color: var(--primary-color);
     color: #fff;
 }
 
-.sec3 .card .lower button:hover{
+.sec3 .card .lower button:hover {
     background-color: #ffe46a;
 }
 
@@ -288,9 +344,7 @@ button:hover {
 }
 
 .sec3 {
-    height: 500px;
     flex-direction: column;
-    justify-content: start;
 }
 
 .sec3 .upper-gar {
@@ -308,21 +362,17 @@ button:hover {
     height: 350px;
     width: 300px;
     border-radius: 6px;
-    transition:all 0.3s ease;
+    transition: all 0.3s ease;
     overflow: hidden;
     margin: 0 20px;
 }
 
-.sec3 .card-sec{
+.sec3 .card-sec {
     justify-content: center;
 }
 
-.sec3 .card:hover{
-    transform: scale(1.1);
-}
-
 .sec3 .upper {
-    background-image: url(images/cc.jpg);
+    background-image: url(/images/cc.jpg);
     background-size: cover;
     background-position: center;
 
@@ -334,17 +384,80 @@ button:hover {
     background-image: linear-gradient(rgba(255, 255, 255, 0), #333533);
 }
 
+
+/* sec4 */
+
+.sec4 {
+    justify-content: space-between;
+    height: 100%;
+    background-color: var(--third-color);
+}
+
+.sec4.flex {
+    flex-direction: column;
+    justify-content: start;
+}
+
+.sec4 .right {
+    width: 50%;
+    justify-content: start;
+}
+
+
+
+.sec4 .left img {
+    width: 70%;
+    object-fit: contain;
+}
+
+.sec4 .left{
+    justify-content: center;
+}
+
+.sec4-lower {
+    justify-content: space-between;
+
+}
+
+.sec4 .words {
+    padding-left: 20px;
+}
+
+.sec4 .words.flex {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sec4 .words p {
+    margin-top: 10px;
+    color: grey;
+}
+
+.sec4 .right .text img {
+    width: 80px;
+}
+
+.sec4 .right.flex {
+    flex-direction: column;
+}
+
+.sec4 .text.flex {
+    justify-content: start;
+
+}
+
+.sec4 .text {
+    margin-bottom: 20px;
+
+}
+
 .footer {
     color: white;
-    height: 300px;
     background-color: var(--secondary-color);
-    margin-top: 100px;
-}
 
-.footer .container {
-    height: 70%;
 
 }
+
 
 .footer .flex {
     flex-direction: column;
@@ -354,57 +467,64 @@ button:hover {
 
 .footer .upper {
     width: 100%;
-    height: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.adv {
-    width: 25%;
+/* .footer .upper-right {
+    width: 100%;
+    flex-direction: row;
+} */
 
-}
+/* .adv {
+    width: 30%;
 
-.adv {
+} */
+
+.footer .adv {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-
+    justify-content: flex-start;
+    gap: 0.5rem;
 }
 
 .adv img {
-    width: 200px;
+    width: 160px;
+    align-self: flex-start;
 }
 
-.social-div {
-    width: 47%;
-    margin: 5px 0;
+.footer .social-div {
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 1.5rem;
 }
+
+
 
 .social-div img {
     width: 20px;
     object-fit: contain;
+    align-self: center;
 }
 
-.social-div.flex {
-    flex-direction: row;
-    justify-content: space-between;
-}
 
 .footudiv {
-    width: 25%;
-    height: 70%;
+    width: 30%;
+
 }
 
 .footer h2,
 .footer p {
     color: white;
-    margin: 5px 0;
+    /* margin: 5px 0; */
     transform: 1s;
 }
 
 .footer .desk-sec {
     flex-direction: column;
+    justify-content: start;
 }
 
 .footer a {
@@ -422,6 +542,7 @@ button:hover {
 
 .footer .lap-sec {
     flex-direction: column;
+    justify-content: start;
 }
 
 .footer h3 {
@@ -467,7 +588,7 @@ button:hover {
 }
 
 .cc-card .img {
-    background-image: url(images/asus\ lap\ png.png);
+    background-image: url(/images/asus\ lap\ png.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -505,23 +626,20 @@ button:hover {
 
 
 .reg-form-sec {
-    height: 100vh;
     justify-content: space-around;
 }
 
 
 
 .reg-form {
-    height: 400px;
-    width: 25vw;
-    padding: 20px;
+    width: 50%;
+    padding: 2rem 1rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgb(211, 211, 211);
+    box-shadow: 5px 5px 10px lightgrey;
 }
 
 .reg-form form {
-    height: 100%;
     flex-direction: column;
     justify-content: space-between;
 
@@ -543,14 +661,15 @@ button:hover {
 }
 
 .reg-form .input {
-    height: 70%;
     flex-direction: column;
-
+    margin: 2rem 0;
+    
 }
 
 .reg-form .input h3 {
     color: grey;
     font-weight: 400;
+
 }
 
 .reg-form .input span {
@@ -560,16 +679,19 @@ button:hover {
 
 .reg-form input {
     width: 100%;
-    height: 30px;
-    border: 1px solid rgb(224, 224, 224);
-    margin: 10px 0;
+    height: 2rem;
+    border: 1px solid lightgrey;
+    padding: 0.5rem 1rem;
+    outline: none;
+    margin: 1rem 0;
 }
 
 .already-reg {
-    height: 200px;
-    width: 250px;
-    padding: 40px;
-    justify-content: space-around;
+    border: 1px solid grey;
+    border-radius: 10px;
+    height: 25vh;
+    padding: 2rem 1rem;
+    justify-content: space-between;
 }
 
 .already-reg.flex {
@@ -582,7 +704,6 @@ button:hover {
 
 .already-reg button {
     width: 100%;
-    height: 40px;
     background-color: var(--secondary-color);
     color: white;
     border: none;
@@ -620,72 +741,6 @@ button:hover {
     margin-top: 20px;
 }
 
-/* sec4 */
-
-.sec4 {
-    justify-content: space-between;
-    height: 600px;
-}
-
-.sec4.flex {
-    flex-direction: column;
-    justify-content: start;
-}
-
-.sec4 .right {
-    width: 40%;
-    justify-content: start;
-}
-
-.sec4 .left {
-
-    width: 50%;
-
-}
-
-.sec4 .left img {
-    width: 70%;
-    height: 300px;
-    object-fit: contain;
-}
-
-.sec4-lower {
-    height: 70%;
-    justify-content: space-between;
-    margin-top: 100px;
-}
-
-.sec4 .words {
-    padding-left: 20px;
-}
-
-.sec4 .words.flex {
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.sec4 .words p {
-    margin-top: 10px;
-    color: grey;
-}
-
-.sec4 .right .text img {
-    width: 80px;
-}
-
-.sec4 .right.flex {
-    flex-direction: column;
-}
-
-.sec4 .text.flex {
-    justify-content: start;
-
-}
-
-.sec4 .text {
-    margin-bottom: 20px;
-
-}
 
 /* Cart */
 
@@ -699,24 +754,20 @@ button:hover {
 .black-div {
     width: 90%;
     background-color: var(--secondary-color);
-    height: 80px;
+    height: 6rem;
     border-radius: 10px;
-    padding: 20px;
+    padding: 2rem;
     color: white;
     justify-content: start;
+    gap: 2rem;
     align-items: center;
-}
-
-.black-div ul {
-    width: 55%;
-    justify-content: space-between;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .cart-main {
     height: 100%;
     width: 100%;
-    justify-content: start;
+    justify-content: space-between;
     margin-top: 30px;
 }
 
@@ -735,6 +786,10 @@ button:hover {
     border-spacing: 0;
     border-collapse: collapse;
     line-height: 1.4;
+}
+
+.cart-main button{
+    height: fit-content;
 }
 
 .cart-main .product-thumbnail img {
@@ -797,21 +852,25 @@ button:hover {
 }
 
 .cart-main .right {
-    width: 40%;
+    /* width: 40%; */
     justify-content: end;
 }
 
+
 .cart-main .right .card {
-    height: 60%;
-    width: 70%;
-    padding: 10px;
+    /* height: 60%; */
+    width: 100%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 2rem;
 }
 
 .cart-main .right .card h2 {
     text-align: center;
     font-weight: 500;
+    background-color: var(--primary-color);
+    border-radius: 6px 6px 0 0;
+    color: white;
 }
 
 .cart-main .right .card table {
@@ -839,40 +898,33 @@ button:hover {
 
 .checkout-sec {
     flex-direction: column;
-    height: 1200px;
     justify-content: start;
     align-items: center;
 }
 
-.checkout-main {
-    height: 100%;
-    justify-content: start;
-    width: 100%;
-}
 
-.checkout-sec .checkout-main .left {
-    width: 50%;
+
+.checkout-sec .checkout-main{
+    width: 60%;
     justify-content: start;
     flex-direction: column;
-    padding: 40px 5px;
 }
 
-.checkout-main .left form input {
+.checkout-main form input {
     width: 100%;
-    height: 40px;
-    border: 1px solid rgb(231, 231, 231);
-    padding: 0 15px;
-    margin-top: 10px;
+    height: 3rem;
+    border: 1px solid lightgrey;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
     outline: none;
 }
 
-.checkout-main .left .bill-form {
+.checkout-main .bill-form {
     width: 100%;
-    margin-top: 20px;
 }
 
-.checkout-main .left form {
-    margin-top: 40px;
+.checkout-main form {
+    margin-top: 2rem;
 }
 
 .required-field-star {
@@ -880,17 +932,15 @@ button:hover {
     font: 1rem;
 }
 
-.checkout-main .left .bill-form label {
-    color: var(--faint-text-color);
+.checkout-main .bill-form label {
     font-size: 1rem;
-
+    color: grey;
 }
 
 .checkout-main .payment-method {
-    width: 60%;
     flex-direction: column;
     justify-content: start;
-    margin-top: 40px;
+    margin: 2rem 0;
     color: rgb(219, 219, 219);
 
 }
@@ -924,7 +974,7 @@ button:hover {
     align-items: end;
     justify-content: start;
 
-    
+
 
 
 }
@@ -940,8 +990,7 @@ button:hover {
 }
 
 
-.checkout-main .left .order-btn button {
-    margin-top: 40px;
-    width: 60%;
+.checkout-main .order-btn button {
+    width: 100%;
     justify-content: center;
 }

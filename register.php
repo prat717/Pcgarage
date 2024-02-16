@@ -6,40 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-
+    
 </head>
 
 <body>
     <div class="navbar flex">
+        <div class=" container flex">
+            <div class="nav-logo">
+                <img src="/images/logo.png" alt="">
+            </div>
 
-        <div class="nav-logo">
-            <img src="/images/logo.png" alt="">
+            <div class="nav-items flex">
+                <a href="index.html">Home</a>
+                <a href="">Desktop</a>
+                <a href="">Laptop</a>
+                <a href="">Accsesories</a>
+            </div>
+
+            <div class="nav-account flex">
+                <a href="Register.html"><img src="/images/user icon.png" alt=""></a>
+                <a href="Register.html"><img src="/images/cart icon.png" alt=""></a>
+
+            </div>
         </div>
-
-        <div class="nav-items flex">
-            <a href="index.html">Home</a>
-            <a href="">Desktop</a>
-            <a href="">Laptop</a>
-            <a href="">Accsesories</a>
-        </div>
-
-        <div class="nav-account flex">
-            <a href="Register.html"><img src="/images/user icon.png" alt=""></a>
-            <a href="Register.html"><img src="/images/cart icon.png" alt=""></a>
-
-        </div>
-
     </div>
 
     <div class="main">
         <section class="reg-form-sec container flex">
             <div class="reg-form">
-                <form class="flex" action="/register.php" method="post">
+                <form class="flex" action="register.php" method="post">
                     <h2>Register/ SignUP</h2>
                     <div class="input flex">
 
-                        <h3>User Name<span>*</span></h3> <input type="text" name="username" id="username">
+                        <h3 >User Name<span>*</span></h3> <input type="text" name="username" id="username">
                         <h3>Mobile<span>*</span></h3> <input type="number" name="mobnum" id="mobnum">
                         <h3>Password<span>*</span></h3> <input type="password" name="pass" id="pass">
 
@@ -109,16 +108,40 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    
 
 </body>
 
 </html>
+
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "pcgarage";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $name = isset($_POST['username']) ? $_POST['username'] : '';
+    $number = isset($_POST['mobnum']) ? $_POST['mobnum'] : '';
+    $password = isset($_POST['pass']) ? $_POST['pass'] : '';
+
+
+    $sql = "INSERT INTO `registerform` (`username`, `mobile`, `password`) VALUES ('$name', '$number', '$password');";
+
+    if ($conn->query($sql) === true) {
+        echo "New record added";
+    } else {
+        echo "Error: " . $conn->error;
+    }
+}
+
+$conn->close();
+?>

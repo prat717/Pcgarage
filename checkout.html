@@ -5,128 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="navbar flex">
-        <div class=" container flex">
-            <div class="nav-logo">
-                <img src="images/logo.png" alt="">
-            </div>
 
-            <div class="nav-items flex">
-                <a href="index.html">HOME</a>
-                <a href="">DESKTOP</a>
-                <a href="">LAPTOP</a>
-                <a href="">ACCESSORIES</a>
-            </div>
-
-            <div class="nav-account flex">
-                <a href="Register.html"><img src="images/user icon.png" alt=""></a>
-                <a href="cart.html"><img src="images/cart icon.png" alt=""></a>
-            </div>
+        <div class="nav-logo">
+            <img src="/images/logo.png" alt="">
         </div>
+
+        <div class="nav-items flex">
+            <a href="index.html">HOME</a>
+            <a href="">DESKTOP</a>
+            <a href="">LAPTOP</a>
+            <a href="">ACCESSORIES</a>
+        </div>
+
+        <div class="nav-account flex">
+            <a href="Register.html"><img src="/images/user icon.png" alt=""></a>
+            <a href="cart.html"><img src="/images/cart icon.png" alt=""></a>
+        </div>
+
     </div>
 
     <div class="main">
         <div class="checkout-sec container flex">
             <div class="black-div flex">
-                <ul class="flex">
-                    <li class="shopping-cart-text"><a href="cart.html" style="color: rgb(128, 128, 128);">Shopping
-                            cart</a></li>
-                    <li class="checkout-text"><a href="" style="color: white;">Checkout</a></li>
-                    <li class="complete-order-text"><a href="" style="color: rgb(126, 126, 126);">Complete order</a>
-                    </li>
-                </ul>
+
+                <a href="cart.html" style="color: rgb(128, 128, 128);">Shopping
+                    cart</a></li>
+                <a href="" style="color: white;">Checkout</a></li>
+                <a href="" style="color: rgb(126, 126, 126);">Complete order</a>
+
+
             </div>
 
             <div class="checkout-main flex">
-                <div class="left flex">
-                    <h2>Billing Details</h2>
 
-                    <form action="" method="post">
+                <h2>Billing Details</h2>
 
-                        <div class="bill-form">
-                            <div class="text-sec">
-                                <label for="bill-name">Name</label>
-                                <span class="required-field-star">*</span>
-                            </div>
-                            <input type="text" name="bill-name" id="bill-name">
-                        </div>
-                        <div class="bill-form">
-                            <div class="text-sec">
-                                <label for="bill-country">Country/ Region</label>
-                                <span class="required-field-star">*</span>
-                            </div>
-                            <input type="text" name="bill-country" id="bill-country">
-                        </div>
-                        <div class="bill-form">
-                            <div class="text-sec">
-                                <label for="bill-street">Street Address</label>
-                                <span class="required-field-star">*</span>
-                            </div>
-                            <input type="text" name="bill-street" id="bill-street">
-                        </div>
-                        <div class="bill-form">
-                            <div class="text-sec">
-                                <label for="bill-town">Town/ City</label>
-                                <span class="required-field-star">*</span>
-                            </div>
-                            <input type="text" name="bill-town" id="bill-town">
-                        </div>
-                        <div class="bill-form">
-                            <div class="text-sec">
-                                <label for="bill-town">State</label>
-                                <span class="required-field-star">*</span>
-                            </div>
-                            <input type="text" name="bill-state" id="bill-state">
-                        </div>
-                        <div class="bill-form">
-                            <div class="text-sec">
-                                <label for="bill-pincode">Postal/ Zip code</label>
-                                <span class="required-field-star">*</span>
-                            </div>
-                            <input type="number" name="bill-pincode" id="bill-pincode">
-                        </div>
-                        <div class="bill-form">
-                            <div class="text-sec">
-                                <label for="bill-phone">Phone</label>
-                                <span class="required-field-star">*</span>
-                            </div>
-                            <input type="number" name="bill-phone" id="bill-phone">
-                        </div>
-                        <div class="bill-form">
-                            <div class="text-sec">
-                                <label for="bill-email">Email</label>
-                                <span class="required-field-star">*</span>
-                            </div>
-                            <input type="text" name="bill-email" id="bill-email">
-                        </div>
-                    </form>
+                <form action="" method="post">
 
-                    <div class="payment-method flex">
-                        <h3>Payment Method</h3>
-                        <div class="paytm flex">
-                            <div class="left flex">
-                                <p>Paytm payment gateway</p>
-                                <img src="images/paytm.png" alt="">
-                            </div>
-                            <div class="right flex">
-                                <p>Credit/ Debit cards, UPI</p>
-                                <p>Wallets, Netbanking</p>
-                            </div>
+                    <div class="bill-form">
+                        <div class="text-sec">
+                            <label for="bill-name">Name</label>
+                            <span class="required-field-star">*</span>
                         </div>
+                        <input type="text" name="bill-name" id="bill-name">
+                    </div>
+                    <div class="bill-form">
+                        <div class="text-sec">
+                            <label for="bill-country">Country/ Region</label>
+                            <span class="required-field-star">*</span>
+                        </div>
+                        <input type="text" name="bill-country" id="bill-country">
+                    </div>
+                    <div class="bill-form">
+                        <div class="text-sec">
+                            <label for="bill-street">Street Address</label>
+                            <span class="required-field-star">*</span>
+                        </div>
+                        <input type="text" name="bill-street" id="bill-street">
+                    </div>
+                    <div class="bill-form">
+                        <div class="text-sec">
+                            <label for="bill-town">Town/ City</label>
+                            <span class="required-field-star">*</span>
+                        </div>
+                        <input type="text" name="bill-town" id="bill-town">
+                    </div>
+                    <div class="bill-form">
+                        <div class="text-sec">
+                            <label for="bill-town">State</label>
+                            <span class="required-field-star">*</span>
+                        </div>
+                        <input type="text" name="bill-state" id="bill-state">
+                    </div>
+                    <div class="bill-form">
+                        <div class="text-sec">
+                            <label for="bill-pincode">Postal/ Zip code</label>
+                            <span class="required-field-star">*</span>
+                        </div>
+                        <input type="number" name="bill-pincode" id="bill-pincode">
+                    </div>
+                    <div class="bill-form">
+                        <div class="text-sec">
+                            <label for="bill-phone">Phone</label>
+                            <span class="required-field-star">*</span>
+                        </div>
+                        <input type="number" name="bill-phone" id="bill-phone">
+                    </div>
+                    <div class="bill-form">
+                        <div class="text-sec">
+                            <label for="bill-email">Email</label>
+                            <span class="required-field-star">*</span>
+                        </div>
+                        <input type="text" name="bill-email" id="bill-email">
+                    </div>
+                </form>
 
+                <div class="payment-method flex">
+                    <h3>Payment Method</h3>
+                    <div class="paytm flex">
+                        <div class="left flex">
+                            <p>Paytm payment gateway</p>
+                            <img src="/images/paytm.png" alt="">
+                        </div>
+                        <div class="right flex">
+                            <p>Credit/ Debit cards, UPI</p>
+                            <p>Wallets, Netbanking</p>
+                        </div>
                     </div>
 
-                    <div class="order-btn flex">
-                        <button>Make Payment</button>
-                    </div>
                 </div>
-                <div class="right flex">
 
+                <div class="order-btn flex">
+                    <button>Make Payment</button>
                 </div>
+
+
             </div>
 
 
@@ -137,13 +136,13 @@
                 <div class="upper">
                     <div class="adv footudiv">
 
-                        <img src="images/logo.png" alt="">
+                        <img src="/images/logo.png" alt="">
 
                         <p>Call Us- +91 7709238315</p>
                         <div class="social-div flex ">
-                            <img src="images/insta logo.png" alt="">
-                            <img src="images/whatsapp logo.png " alt="">
-                            <img src="images/yt logo.png" alt="">
+                            <img src="/images/insta logo.png" alt="">
+                            <img src="/images/whatsapp logo.png " alt="">
+                            <img src="/images/yt logo.png" alt="">
                         </div>
                     </div>
                     <div class="desk-sec footudiv flex">
